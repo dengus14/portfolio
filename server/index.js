@@ -22,3 +22,6 @@ app.get('/api/health', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at ${port}`)
 })
+
+const projectRoutes = require('./routes/projectRoutes');
+app.use('/api/projects', projectRoutes);

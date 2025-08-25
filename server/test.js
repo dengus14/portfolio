@@ -32,7 +32,7 @@ async function run() {
   console.log('Project saved:', project);
 
   const projects = await Project.find();
-  console.log('All projects:', projects);
+  console.log('All projects:', projects.title);
 
   mongoose.connection.close();
 }
