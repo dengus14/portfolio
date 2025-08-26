@@ -5,17 +5,22 @@ const express = require('express')
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 4002;
+const port = 4000
+
+const router = express.Router()
 
 connectDB()
 
 app.use(cors());
+app.use(express.json());
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
 app.get('/api/health', (req, res) => {
+  console.log('Health check hit');
   res.json({ status: 'ok' });
 });
 
@@ -23,5 +28,6 @@ app.listen(port, () => {
   console.log(`Example app listening at ${port}`)
 })
 
-const projectRoutes = require('./routes/projectRoutes');
+const projectRoutes = require('./routes/project.routes.js');
 app.use('/api/projects', projectRoutes);
+
