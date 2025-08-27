@@ -8,13 +8,15 @@ const app = express();
 const port = 4000
 
 const router = express.Router()
-
+//connecting to the database, in db.js file
 connectDB()
 
+//cors and http parser
 app.use(cors());
 app.use(express.json());
 
 
+//basic routing
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
