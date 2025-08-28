@@ -4,6 +4,7 @@ import Contact from './components/ContactForm/Contact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
+import Projects from './components/Projects/Projects';
 
 function App() {
   useEffect(() => {
@@ -12,7 +13,8 @@ function App() {
 
   return (
     <React.Fragment>
-      <Contact />
+      {/* <Contact /> */}
+      <Projects />
       <ToastContainer />
     </React.Fragment>
     
