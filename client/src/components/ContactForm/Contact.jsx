@@ -3,7 +3,7 @@ import axios from "axios";
 import './Contact.css'
 import { toast } from "react-toastify";
 
-const Contact = props =>{
+const ContactForm = props =>{
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -82,4 +82,4 @@ const Contact = props =>{
     )
 }
 
-export default Contact;
+export default ContactForm;
