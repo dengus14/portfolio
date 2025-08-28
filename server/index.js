@@ -12,7 +12,11 @@ const router = express.Router()
 connectDB()
 
 //cors and http parser
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",  // or 3000 if React runs on 3000
+  methods: "GET,POST",
+  credentials: true
+}));
 app.use(express.json());
 
 
