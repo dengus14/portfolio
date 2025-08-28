@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios";
 import './Contact.css'
+import { toast } from "react-toastify";
 
 const Contact = props =>{
     const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Contact = props =>{
         subject: "",
         message: "",
     });
+
 
 
     const handleChange = (e) => {
@@ -21,10 +23,11 @@ const Contact = props =>{
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Form submitted:", formData);
-        // here you would send formData to backend (fetch/axios)
         try{
             const response = await axios.post('http://localhost:4000/api/contact', formData);
+            toast.success("Message sent!")
         }catch (error) {
+            toast.error("Failed to send message.")
             console.log(error)
         }
     };
@@ -32,6 +35,10 @@ const Contact = props =>{
 
 
     return (
+        <div className="contact-page">
+            <h1 className="contact-title">Contact Form</h1>
+
+
         <form onSubmit={handleSubmit}>
 
             <label htmlFor='name'></label>
@@ -57,7 +64,7 @@ const Contact = props =>{
                 type='text' 
                 name="subject" 
                 value = {formData.subject}
-                placeholder="Enter subject for the message (optional)"
+                placeholder="Enter subject"
                 onChange={handleChange}
             />
 
@@ -71,6 +78,7 @@ const Contact = props =>{
 
             <button type='submit'>Submit</button>
         </form>
+        </div>
     )
 }
 
