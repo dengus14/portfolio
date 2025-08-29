@@ -1,70 +1,84 @@
 .card {
-  background-color: #1a1a1a; 
-  border: 1px solid #2c2c2c;
+  background: linear-gradient(145deg, #12121f, #1a1a2f); 
+  border: 1px solid #2c2c45; 
   padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(20, 20, 50, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
+  font-family: 'Fira Mono', monospace;
+  color: #00ff7f;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
 }
 
 .card:hover {
   transform: scale(1.05);
-  border: 1px solid #4db6ac;
-  box-shadow: 0 10px 25px rgba(77, 182, 172, 0.4);
+  border: 1px solid #39148f;
+  box-shadow: 0 10px 25px rgba(102, 255, 153, 0.4);
 }
 
 .card h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #4db6ac;
+  color: #00ff7f;
   margin-bottom: 10px;
 }
 
 .card p {
-  color: #b2dfdb;
-  margin-bottom: 15px;
+  color: #33ff33;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 .card .tech-stack {
-  margin-top: 10px;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .card .tech-stack h3 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #4db6ac;
-  margin-bottom: 5px;
+  color: #00ff7f;
+  margin-bottom: 10px;
 }
 
 .card .tech-stack ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  list-style: none; 
-  padding: 0;       
+  justify-content: center; 
+  gap: 8px;
+  padding: 0;
   margin: 0;
 }
 
 .card .tech-stack li {
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  background-color: #004d47;
-  color: #b2dfdb;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  background-color: #14142a; 
+  color: #00ff7f;
   border-radius: 6px;
-  border: 1px solid #00695c;
+  border: 1px solid #33ff33;
   list-style: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card .tech-stack li:hover {
+  background-color: #33ff33;
+  color: #12121f;
+  transform: translateY(-2px);
 }
 
 .card a {
   display: inline-block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #b2dfdb;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #00ff7f;
   text-decoration: underline;
-  transition: color 0.3s ease;
 }
 
 .card a:hover {
-  color: #e0f7f4;
+  color: #33ff33;
 }

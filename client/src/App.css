@@ -1,0 +1,17 @@
+section {
+  min-height: 100vh;
+  margin: 0;          /* remove default margins */
+  padding: 0;         /* remove default padding */
+  scroll-margin-top: 70px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

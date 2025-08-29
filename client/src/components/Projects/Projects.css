@@ -1,8 +1,9 @@
 .projects-container {
   padding: 24px;
   min-height: 80vh; 
-  background-color: #0f0f0f; 
+  color: #00ff7f;
 }
+
 
 .projects-grid {
   display: grid;
@@ -23,7 +24,8 @@
 }
 
 .loading-text {
-  color: #b2dfdb;
+  color: #33ff33; 
   text-align: center;
   font-size: 1.2rem;
+  margin-top: 50px;
 }

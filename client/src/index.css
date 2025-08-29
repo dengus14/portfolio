@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #e8dcdc; 
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #2a1a3f);
   color: #fff; 
 }
 
@@ -15,3 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
