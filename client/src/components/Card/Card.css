@@ -1,0 +1,70 @@
+.card {
+  background-color: #1a1a1a; 
+  border: 1px solid #2c2c2c;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border: 1px solid #4db6ac;
+  box-shadow: 0 10px 25px rgba(77, 182, 172, 0.4);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4db6ac;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #b2dfdb;
+  margin-bottom: 15px;
+}
+
+.card .tech-stack {
+  margin-top: 10px;
+}
+
+.card .tech-stack h3 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4db6ac;
+  margin-bottom: 5px;
+}
+
+.card .tech-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none; 
+  padding: 0;       
+  margin: 0;
+}
+
+.card .tech-stack li {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  background-color: #004d47;
+  color: #b2dfdb;
+  border-radius: 6px;
+  border: 1px solid #00695c;
+  list-style: none;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #b2dfdb;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #e0f7f4;
+}
