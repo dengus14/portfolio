@@ -1,8 +1,11 @@
 .about-container {
     text-align: center;
-    color: #fff;
+    color: #4db6ac;
     padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
 
 .circle-container {
     position: relative;
@@ -19,4 +22,17 @@
 
 .circle-item:hover {
     transform: scale(1.3);
+}
+about-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #4db6ac; 
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd; 
+    margin-bottom: 40px;
+    text-align: justify; 
 }

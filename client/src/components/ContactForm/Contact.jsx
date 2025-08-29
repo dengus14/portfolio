@@ -7,7 +7,6 @@ const ContactForm = props =>{
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        subject: "",
         message: "",
     });
 
@@ -56,15 +55,6 @@ const ContactForm = props =>{
                 name="email" 
                 placeholder="Enter your email"
                 value = {formData.email}
-                onChange={handleChange}
-            />
-
-            <label htmlFor='subject'></label>
-            <input 
-                type='text' 
-                name="subject" 
-                value = {formData.subject}
-                placeholder="Enter subject"
                 onChange={handleChange}
             />
 

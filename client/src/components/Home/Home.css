@@ -1,0 +1,71 @@
+.home-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4db6ac;
+}
+
+.home-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.home-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1a1a1a;
+  background: #4db6ac;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #3aa79a;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #4db6ac;
+  color: #4db6ac;
+}
+
+.btn-outline:hover {
+  background: #4db6ac;
+  color: #1a1a1a;
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    margin: 20px;
+    padding: 20px;
+  }
+}

@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
 import ContactForm from './components/ContactForm/Contact';
 import About from './components/About/About';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
 
 function App() {
   useEffect(() => {
@@ -19,12 +21,14 @@ function App() {
       <NavBar /> 
       <div className="pt-4"> 
         <Routes>
-          <Route path="/" element={<Projects />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/about" element ={<About />} />
         </Routes>
       </div>
       <ToastContainer />
+      <Footer />
     </Router>
   );
 }
