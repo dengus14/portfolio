@@ -8,6 +8,7 @@ const ContactForm = () => {
   const [toastMessage, setToastMessage] = useState("");
   const [toastType, setToastType] = useState("success");
   const [showToast, setShowToast] = useState(false);
+  const API_CONTACT = process.env.REACT_APP_API_CONTACT;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,7 +17,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/contact", formData);
+      await axios.post(API_CONTACT, formData);
       setToastMessage("Message sent!");
       setToastType("success");
       setShowToast(true);
