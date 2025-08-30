@@ -30,9 +30,9 @@ const getProjectById = async (req, res) => {
 
 
 const createProject = async (req, res) => {
-    const { title, description, techStack } = req.body
+    const { title, description, techStack, imageUrl } = req.body
 
-    const project = new Project({title:title, description:description, techStack:techStack})
+    const project = new Project({title:title, description:description, techStack:techStack, imageUrl:imageUrl })
 
     try{
         const newProject = await project.save()
@@ -48,12 +48,12 @@ const createProject = async (req, res) => {
 const updateProject = async (req,res) => {
     const { id } = req.params;
 
-    const {title, description, techStack } = req.body
+    const {title, description, techStack, imageUrl } = req.body
 
     try{
         const newProject = await Project.findByIdAndUpdate(
             id,
-            { title, description, techStack }, 
+            { title, description, techStack, imageUrl }, 
             { new: true } 
         );
         if(!newProject){

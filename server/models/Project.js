@@ -16,6 +16,10 @@ const projectSchema = new mongoose.Schema({
   techStack: {
     type: [String],
     required: true
+  },
+  imageUrl: {
+    type: String,
+    required: false 
   }
 });
 
