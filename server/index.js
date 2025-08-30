@@ -13,11 +13,6 @@ connectDB()
 
 //cors and http parser
 app.use(cors({
-  origin: "http://localhost:3000",  // or 3000 if React runs on 3000
-  methods: "GET,POST",
-  credentials: true
-},
-{
   origin: "https://denisgusevportfolio-3k9w.onrender.com/",  // or 3000 if React runs on 3000
   methods: "GET,POST",
   credentials: true
