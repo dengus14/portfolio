@@ -10,13 +10,23 @@ const About = () => {
         <div className="about-container">
             <h2>About Me</h2>
             <p>
-                Hi, I’m Denis Gusev, a Computer Science student at the University of Wisconsin–Milwaukee 
-                and aspiring Full-Stack Software Engineer. I have experience building production-ready 
-                web applications through my internship at Northwestern Mutual, where I developed frontend 
-                features using React, Next.js, and APIs that serve thousands of users. I enjoy working across the stack with Python, 
-                JavaScript, Django, and Java, and I’m passionate about solving problems with clean, scalable code. Outside of school and 
-                work, I’m always learning new technologies and improving my skills to grow as a developer.
+            I’m Denis Gusev, currently studying Computer Science at the University of 
+            Wisconsin–Milwaukee. My journey into software started with curiosity about 
+            how the web works, and has grown into a passion for building real-world 
+            solutions with code.
             </p>
+            <p>
+            During my internship at Northwestern Mutual, I worked on frontend features 
+            in React and Next.js, integrating APIs that impact thousands of users. That 
+            experience taught me the importance of writing clean, maintainable code and 
+            collaborating with other engineers.
+            </p>
+            <p>
+            Beyond academics and work, I’m always exploring new technologies — from 
+            backend frameworks like Django and Node.js to experimenting with deployment 
+            pipelines. When I am not coding, I am going to the gym or working on cars with friens.
+            </p>
+
 
             <div 
                 className="circle-container"

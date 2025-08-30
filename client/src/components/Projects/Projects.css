@@ -1,14 +1,14 @@
 .projects-container {
   padding: 24px;
-  min-height: 80vh; 
+  min-height: 80vh;
   color: #00ff7f;
 }
-
 
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+  align-items: start;
 }
 
 @media (min-width: 640px) {
@@ -24,7 +24,7 @@
 }
 
 .loading-text {
-  color: #33ff33; 
+  color: #33ff33;
   text-align: center;
   font-size: 1.2rem;
   margin-top: 50px;

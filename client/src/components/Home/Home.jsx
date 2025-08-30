@@ -7,13 +7,14 @@ const Home = () => {
       <h2 className="home-title">Welcome to My Portfolio</h2>
       <p className="home-subtitle">Hi, I’m Denis 👋</p>
       <p className="home-description">
-        I’m a Computer Science student and aspiring Full-Stack Developer. I’ve
-        built production-ready web apps during my internship at Northwestern
-        Mutual using React, Next.js, and APIs that serve thousands of users.
-        I love solving problems with clean, scalable code.
+        I’m a Full-Stack Developer in training who loves building sleek, scalable
+  web apps. My focus is on JavaScript, React, and modern backend frameworks.  
       </p>
       <div className="home-buttons">
-        <a href="/projects" className="btn">View My Projects</a>
+        
+       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn">
+            View My Resume
+       </a>
         <a href="/contact" className="btn btn-outline">Get in Touch</a>
       </div>
     </div>
