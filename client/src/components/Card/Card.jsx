@@ -27,6 +27,8 @@ const Card = ({ title, description, techStack, link }) => {
         </div>
       )}
       {title === "Course Enrollment" && <button onClick={handleLinked} className="imageButton">view linkedin</button>}
+      {title === "Commit Tracker" && <button className="imageButton">PROJECT INCOMING</button>}
+
 
       {title === "Status Page" &&<button onClick={handleOpen} className="imageButton">
         {isOpen ? "Close" : "View Work"}
