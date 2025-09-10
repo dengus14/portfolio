@@ -24,7 +24,7 @@ const About = () => {
             <p>
             Beyond academics and work, I’m always exploring new technologies — from 
             backend frameworks like Django and Node.js to experimenting with deployment 
-            pipelines. When I am not coding, I am going to the gym or working on cars with friens.
+            pipelines. When I am not coding, I am going to the gym or working on cars with friends.
             </p>
 
 
