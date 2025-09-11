@@ -12,6 +12,10 @@ const Card = ({ title, description, techStack, link }) => {
     window.open('https://www.linkedin.com/in/denis-gusev-408a73244/', "_blank")
   }
 
+  const handleCommit = () =>{
+    window.open('https://committracker.onrender.com/', "_blank")
+  }
+
   return (
     <div className={`card ${isOpen ? 'card-expanded' : ''}`}>
       <h2>{title}</h2>
@@ -27,7 +31,7 @@ const Card = ({ title, description, techStack, link }) => {
         </div>
       )}
       {title === "Course Enrollment" && <button onClick={handleLinked} className="imageButton">view linkedin</button>}
-      {title === "Commit Tracker" && <button className="imageButton">PROJECT INCOMING</button>}
+      {title === "Commit Tracker" && <button onClick={handleCommit}className="imageButton">LIVE DEMO</button>}
 
 
       {title === "Status Page" &&<button onClick={handleOpen} className="imageButton">
