@@ -37,6 +37,7 @@ const Card = ({ title, description, techStack, link }) => {
       {title === "Status Page" &&<button onClick={handleOpen} className="imageButton">
         {isOpen ? "Close" : "View Work"}
       </button>}
+      {title === "Scan-To-Access-Note taking app" &&<button  className="imageButton">IN DEVELOPMENT</button>}
 
       {isOpen && (
         <div className="image-container">
