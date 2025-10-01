@@ -7,7 +7,7 @@ import "./Projects.css";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = "https://denisportfolio.duckdns.org/api/projects";
 
   //"http://localhost:4000/api/projects"
   useEffect(() => {

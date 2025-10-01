@@ -8,7 +8,7 @@ const ContactForm = () => {
   const [toastMessage, setToastMessage] = useState("");
   const [toastType, setToastType] = useState("success");
   const [showToast, setShowToast] = useState(false);
-  const API_CONTACT = process.env.REACT_APP_API_CONTACT;
+  const API_CONTACT = "https://denisportfolio.duckdns.org/api/contact";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
