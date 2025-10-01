@@ -13,7 +13,7 @@ connectDB()
 
 //cors and http parser
 app.use(cors({
-  origin: "https://denisgusevportfolio-3k9w.onrender.com",  
+  origin: process.env.CORS_ORIGIN,  
   methods: "GET,POST",
   credentials: true
 }
