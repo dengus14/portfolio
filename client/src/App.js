@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { getData } from './api/fetchHook/fetchHealth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
@@ -12,9 +11,6 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
-  useEffect(() => {
-    getData();
-  }, []);
   
 
   return (
