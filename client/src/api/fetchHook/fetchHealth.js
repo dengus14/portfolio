@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 export async function getData() {
-  const url = "http://localhost:4000/api/health";
+  const url = "https://denisportfolio.duckdns.org/api/health";
   try {
     const response = await fetch(url);
 

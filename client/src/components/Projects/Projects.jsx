@@ -7,13 +7,14 @@ import "./Projects.css";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const API_URL = "https://denisportfolio.duckdns.org/api/projects";
+  const API_URL = "https://denisportfolio.duckdns.org/api";
+
 
   //"http://localhost:4000/api/projects"
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(API_URL);
+        const response = await axios.get(`${API_URL}/projects`);
         setProjects(response.data);
         setLoading(false);
       } catch (error) {
