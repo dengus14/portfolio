@@ -5,31 +5,33 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 60px 40px;
-  color: #00ff00; 
-  font-family: 'Fira Mono', 'Courier New', monospace;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
   line-height: 1.6;
+  position: relative;
 }
 
 .home-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #00ff7f; 
+  color: var(--accent-primary);
+  text-shadow: 0 0 10px var(--accent-primary), 0 0 24px var(--glow-heading);
 }
 
 .home-subtitle {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #33ff33;
+  color: var(--text-primary);
   margin-bottom: 20px;
 }
 
 .home-description {
   font-size: 1rem;
-  color: #00ff7f;
-  max-width: 800px;
+  color: var(--text-secondary);
+  max-width: 600px;
   margin-bottom: 30px;
-  white-space: pre-line; 
+  white-space: pre-line;
 }
 
 .home-buttons {
@@ -39,7 +41,7 @@
 }
 
 .btn, .btn-outline {
-  font-family: 'Fira Mono', monospace;
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
   font-weight: bold;
   font-size: 1rem;
   padding: 10px 20px;
@@ -47,28 +49,21 @@
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
-}
-
-.btn {
-  background-color: #111; 
-  color: #00ff7f;
-  border: 1px solid #00ff7f;
-}
-
-.btn:hover {
-  background-color: #00ff7f;
-  color: #0d0d0d;
-}
-
-.btn-outline {
+  position: relative;
   background: transparent;
-  border: 1px solid #00ff7f;
-  color: #00ff7f;
+  color: #4ade80;
+  border: 1px solid #4ade80;
 }
 
+.btn:hover,
 .btn-outline:hover {
-  background-color: #111;
-  color: #00ff7f;
+  background-color: rgba(74, 222, 128, 0.08);
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.3);
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px var(--accent-primary), 0 0 12px var(--glow-panel); }
+  50%       { box-shadow: 0 0 14px var(--accent-primary), 0 0 28px var(--glow-heading); }
 }
 
 .home-subtitle::after {
@@ -79,7 +74,36 @@
 
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  25%, 75%      { opacity: 0; }
+}
+
+/* Floating side panels — desktop only */
+.home-page .terminal-window {
+  position: absolute;
+  left: -340px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  transition: width 0.25s ease, font-size 0.25s ease;
+}
+
+.home-page .terminal-maximized {
+  left: -520px;
+}
+
+.home-page .code-snippet {
+  position: absolute;
+  right: -440px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .home-page .terminal-window,
+  .home-page .code-snippet {
+    display: block;
+  }
 }
 
 @media (max-width: 640px) {

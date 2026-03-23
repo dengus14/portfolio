@@ -14,27 +14,27 @@ function App() {
 
   return (
     <div className="app-container">
-      <NavBar />
+      <div className="reveal" style={{ animationDelay: "0s" }}>
+        <NavBar />
+      </div>
 
       <main className="main-content">
-        <section id="home">
+        <section id="home" className="reveal" style={{ animationDelay: "0.2s" }}>
           <Home />
         </section>
 
-        <section id="about">
+        <section id="about" className="reveal" style={{ animationDelay: "0.5s" }}>
           <About />
         </section>
 
-        <section id="projects">
+        <section id="projects" className="reveal" style={{ animationDelay: "0.8s" }}>
           <Projects />
         </section>
 
-<Footer />
-        
-        
+        <div className="reveal" style={{ animationDelay: "1.1s" }}>
+          <Footer />
+        </div>
       </main>
-
-      
     </div>
   );
 }

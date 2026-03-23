@@ -1,0 +1,38 @@
+.code-snippet {
+  width: 400px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-panel);
+  border-radius: 8px;
+  box-shadow: 0 0 18px var(--glow-panel), 0 0 4px var(--glow-panel);
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
+  font-size: 0.78rem;
+  padding: 18px 20px;
+  line-height: 1.9;
+  animation: fadeInRight 0.8s ease forwards, bob 4s ease-in-out 1s infinite;
+}
+
+.code-line {
+  white-space: pre;
+}
+
+.code-indent {
+  padding-left: 1.5rem;
+}
+
+/* Syntax token colors */
+.token-keyword    { color: var(--text-keyword); }
+.token-var        { color: var(--text-key); }
+.token-key        { color: var(--text-key); }
+.token-string     { color: var(--text-string); }
+.token-punctuation { color: var(--text-primary); }
+.token-bracket    { color: var(--bracket-gold); }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

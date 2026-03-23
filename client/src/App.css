@@ -1,13 +1,30 @@
 section {
-  min-height: 70vh;
-  margin: 0;          /* remove default margins */
-  padding: 0;         /* remove default padding */
-  scroll-margin-top: 70px; 
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+  scroll-margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
+  overflow: visible;
+  position: relative;
+}
+
+/* Staggered reveal animation */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: reveal 0.7s ease forwards;
 }
 
 .main-content {

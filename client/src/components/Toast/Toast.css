@@ -4,7 +4,7 @@
   right: 20px;
   padding: 14px 20px;
   border-radius: 8px;
-  color: #fff;
+  color: var(--bg-primary);
   font-weight: bold;
   min-width: 200px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -14,15 +14,15 @@
 }
 
 .toast.info {
-  background-color: #00aaff;
+  background-color: var(--color-info);
 }
 
 .toast.success {
-  background-color: #00ff7f;
+  background-color: var(--accent-primary);
 }
 
 .toast.error {
-  background-color: #ff4d4d;
+  background-color: var(--color-error);
 }
 
 .toast:hover {

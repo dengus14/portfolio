@@ -1,16 +1,16 @@
 .footer {
-  background-color: #0f0f0f;
-  color: #fff;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   text-align: center;
   padding: 20px 0;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--border-card);
   margin-top: 0;
 }
 
 .footer-text {
   margin: 0;
   font-size: 14px;
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .footer-icons {
@@ -20,10 +20,10 @@
 .footer-icons a {
   margin: 0 10px;
   font-size: 20px;
-  color: #fff;
+  color: var(--text-primary);
   transition: color 0.3s ease;
 }
 
 .footer-icons a:hover {
-  color: #1da1f2; 
+  color: var(--color-twitter);
 }

@@ -1,23 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
-  background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #2a1a3f);
-  color: #fff; 
+:root {
+  /* backgrounds */
+  --bg-primary: #0a0d12;
+  --bg-secondary: #0f1318;
+  --bg-panel: rgba(15, 20, 26, 0.85);
+
+  /* accents */
+  --accent-primary: #4ade80;
+  --accent-dim: #1f4a2e;
+  --accent-muted: #6ee7a0;
+
+  /* text */
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-code: #a3e4c1;
+  --text-keyword: #4ade80;
+  --text-string: #86efac;
+  --text-key: #7dd3fc;
+
+  /* borders & glows */
+  --border-panel: rgba(74, 222, 128, 0.15);
+  --border-card: rgba(74, 222, 128, 0.12);
+  --glow-panel: rgba(74, 222, 128, 0.06);
+  --glow-heading: rgba(74, 222, 128, 0.4);
+
+  /* misc */
+  --dot-red: #ff5f57;
+  --dot-yellow: #febc2e;
+  --dot-green: #28c840;
+  --bracket-gold: #ffd700;
+  --color-twitter: #1da1f2;
+  --color-error: #ff4d4d;
+  --color-info: #00aaff;
 }
 
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+}
+
+/* Subtle scanline overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
-
