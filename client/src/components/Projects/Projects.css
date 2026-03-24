@@ -4,6 +4,15 @@
   color: var(--text-primary);
 }
 
+.projects-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-family: Calibri, sans-serif;
+  text-align: center;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;

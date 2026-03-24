@@ -6,6 +6,7 @@ import "./Projects.css";
 const Projects = () => {
   return (
     <div className="projects-container">
+      <h2 className="projects-title">My Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <Card

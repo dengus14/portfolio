@@ -42,7 +42,7 @@ const Home = () => {
       <p className="home-subtitle reveal" style={{ animationDelay: "0.5s" }}>Hi, I'm Denis 👋</p>
       <p className="home-description reveal" style={{ animationDelay: "0.7s" }}>
         I'm a Full-Stack Developer in training who loves building sleek, scalable
-  web apps. My focus is on JavaScript, React, and modern backend frameworks.
+  web apps. My focus is on React.js for frontend, and either SpringBoot Java or Node.js.
       </p>
       <div className="home-buttons reveal" style={{ animationDelay: "0.9s" }}>
         <button className="btn" onClick={handleToggle}>

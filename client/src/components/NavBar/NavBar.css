@@ -13,11 +13,19 @@
   font-family: Calibri, sans-serif;
 }
 
-.navbar h1 {
+.nav-brand {
+  display: flex;
+  align-items: flex-end;
+  gap: 0px;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin: 0;
+}
+
+.nav-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .nav-links {
