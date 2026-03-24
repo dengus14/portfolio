@@ -10,21 +10,20 @@ const About = () => {
         <div className="about-container">
             <h2>About Me</h2>
             <p>
-            I’m Denis Gusev, currently studying Computer Science at the University of 
-            Wisconsin–Milwaukee. My journey into software started with curiosity about 
-            how the web works, and has grown into a passion for building real-world 
-            solutions with code.
+            I’m Denis Gusev, a Computer Science graduate from the University of
+            Wisconsin–Milwaukee. What started as curiosity about how the web works
+            turned into a genuine passion for building things that actually matter.
             </p>
             <p>
-            During my internship at Northwestern Mutual, I worked on frontend features 
-            in React and Next.js, integrating APIs that impact thousands of users. That 
-            experience taught me the importance of writing clean, maintainable code and 
-            collaborating with other engineers.
+            During my internship at Northwestern Mutual, I built frontend features
+            in React and Next.js, integrating APIs used by thousands of users. It’s
+            where I learned that clean, maintainable code isn’t just a best practice
+            — it’s what makes teams move fast without breaking everything.
             </p>
             <p>
-            Beyond academics and work, I’m always exploring new technologies — from 
-            backend frameworks like Django and Node.js to experimenting with deployment 
-            pipelines. When I am not coding, I am going to the gym or working on cars with friends.
+            These days I build with React on the frontend and either Node.js or
+            Spring Boot on the backend depending on what the project calls for.
+            Outside of coding I’m either at the gym or working on cars with friends.
             </p>
 
 
