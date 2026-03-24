@@ -14,9 +14,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="reveal" style={{ animationDelay: "0s" }}>
-        <NavBar />
-      </div>
+      <NavBar />
 
       <main className="main-content">
         <section id="home" className="reveal" style={{ animationDelay: "0.2s" }}>

@@ -2,9 +2,8 @@
   width: 370px;
   overflow: hidden;
   background: var(--bg-panel);
-  border: 1px solid var(--border-panel);
+  border: 1px solid var(--border-default);
   border-radius: 8px;
-  box-shadow: 0 0 18px var(--glow-panel), 0 0 4px var(--glow-panel);
   font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
   font-size: 0.82rem;
   padding: 18px 20px;
@@ -26,8 +25,8 @@
 .token-var        { color: var(--text-key); }
 .token-key        { color: var(--text-key); }
 .token-string     { color: var(--text-string); }
-.token-punctuation { color: var(--text-primary); }
-.token-bracket    { color: var(--bracket-gold); }
+.token-punctuation { color: var(--text-tertiary); }
+.token-bracket    { color: var(--text-secondary); }
 
 @keyframes bob {
   0%, 100% { transform: translateY(0px);  }

@@ -1,9 +1,8 @@
 .terminal-window {
   width: 240px;
   background: var(--bg-panel);
-  border: 1px solid var(--border-panel);
+  border: 1px solid var(--border-default);
   border-radius: 8px;
-  box-shadow: 0 0 18px var(--glow-panel), 0 0 4px var(--glow-panel);
   font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
   font-size: 0.7rem;
   overflow: hidden;
@@ -15,8 +14,8 @@
   align-items: center;
   gap: 6px;
   padding: 8px 12px;
-  background: var(--glow-panel);
-  border-bottom: 1px solid var(--border-panel);
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-default);
 }
 
 .dot {
@@ -47,7 +46,7 @@
 
 .terminal-title {
   margin-left: 8px;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   font-size: 0.72rem;
 }
 
@@ -66,7 +65,7 @@
   display: inline-block;
   width: 8px;
   height: 1em;
-  background: var(--accent-primary);
+  background: var(--text-secondary);
   vertical-align: text-bottom;
   animation: blink-cursor 1s step-end infinite;
 }

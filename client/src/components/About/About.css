@@ -1,9 +1,10 @@
 .about-container {
     text-align: center;
-    color: var(--text-secondary);
+    color: var(--text-tertiary);
     padding: 40px 20px;
     max-width: 800px;
     margin: 0 auto;
+    font-family: Calibri, sans-serif;
 }
 
 .circle-container {
@@ -25,14 +26,15 @@
 
 .about-container h2 {
     font-size: 1.75rem;
+    font-weight: 600;
     margin-bottom: 20px;
-    color: var(--accent-primary);
+    color: var(--text-primary);
 }
 
 .about-container p {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-tertiary);
     margin-bottom: 40px;
     text-align: justify;
 }

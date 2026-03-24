@@ -2,34 +2,39 @@
 
 :root {
   /* backgrounds */
-  --bg-primary: #0a0d12;
-  --bg-secondary: #0f1318;
-  --bg-panel: rgba(15, 20, 26, 0.85);
+  --bg-primary: #0f1117;
+  --bg-secondary: #161b24;
+  --bg-panel: rgba(22, 27, 36, 0.85);
 
   /* accents */
-  --accent-primary: #4ade80;
-  --accent-dim: #1f4a2e;
-  --accent-muted: #6ee7a0;
+  --accent-primary: #f1f5f9;
+  --accent-secondary: #64748b;
+  --accent-muted: #94a3b8;
 
   /* text */
-  --text-primary: #e2e8f0;
+  --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
-  --text-code: #a3e4c1;
-  --text-keyword: #4ade80;
-  --text-string: #86efac;
+  --text-tertiary: #64748b;
+  --text-code: #cbd5e1;
+  --text-keyword: #94a3b8;
+  --text-string: #cbd5e1;
   --text-key: #7dd3fc;
 
-  /* borders & glows */
-  --border-panel: rgba(74, 222, 128, 0.15);
-  --border-card: rgba(74, 222, 128, 0.12);
-  --glow-panel: rgba(74, 222, 128, 0.06);
-  --glow-heading: rgba(74, 222, 128, 0.4);
+  /* borders */
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --border-panel: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.08);
+
+  /* glows — kept as transparent so existing references don't break */
+  --glow-panel: transparent;
+  --glow-heading: transparent;
 
   /* misc */
   --dot-red: #ff5f57;
   --dot-yellow: #febc2e;
   --dot-green: #28c840;
-  --bracket-gold: #ffd700;
+  --bracket-gold: #94a3b8;
   --color-twitter: #1da1f2;
   --color-error: #ff4d4d;
   --color-info: #00aaff;
@@ -37,7 +42,7 @@
 
 body {
   margin: 0;
-  font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
+  font-family: Calibri, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-primary);
@@ -45,24 +50,6 @@ body {
   position: relative;
 }
 
-/* Subtle scanline overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.04) 2px,
-    rgba(0, 0, 0, 0.04) 4px
-  );
-  pointer-events: none;
-  z-index: 9999;
-}
 
 code {
   font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;

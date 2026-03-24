@@ -6,7 +6,7 @@
   align-items: flex-start;
   padding: 48px 20px;
   color: var(--text-primary);
-  font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
+  font-family: Calibri, sans-serif;
   line-height: 1.6;
   position: relative;
   max-width: 800px;
@@ -16,26 +16,26 @@
 }
 
 .home-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 600;
   margin-bottom: 10px;
-  color: var(--accent-primary);
-  text-shadow: 0 0 10px var(--accent-primary), 0 0 24px var(--glow-heading);
+  color: var(--text-primary);
 }
 
 .home-subtitle {
   font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--text-primary);
+  font-weight: 400;
+  color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
 .home-description {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: 0.95rem;
+  color: var(--text-tertiary);
   max-width: 480px;
   margin-bottom: 30px;
   white-space: pre-line;
+  line-height: 1.7;
 }
 
 .home-buttons {
@@ -45,9 +45,9 @@
 }
 
 .btn, .btn-outline {
-  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
-  font-weight: bold;
-  font-size: 0.875rem;
+  font-family: Calibri, sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
@@ -55,19 +55,15 @@
   transition: all 0.2s ease;
   position: relative;
   background: transparent;
-  color: #4ade80;
-  border: 1px solid #4ade80;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
 }
 
 .btn:hover,
 .btn-outline:hover {
-  background-color: rgba(74, 222, 128, 0.08);
-  box-shadow: 0 0 12px rgba(74, 222, 128, 0.3);
-}
-
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 6px var(--accent-primary), 0 0 12px var(--glow-panel); }
-  50%       { box-shadow: 0 0 14px var(--accent-primary), 0 0 28px var(--glow-heading); }
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }
 
 .home-subtitle::after {
@@ -82,7 +78,7 @@
 }
 
 /* Floating code snippet panel — desktop only */
-.home-page .code-snippet {
+.code-snippet-wrapper {
   position: absolute;
   right: -290px;
   top: 50%;
@@ -91,9 +87,34 @@
 }
 
 @media (min-width: 1200px) {
-  .home-page .code-snippet {
+  .code-snippet-wrapper {
     display: block;
   }
+}
+
+/* Resume panel */
+.resume-panel {
+  width: 100%;
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-width 0.45s ease,
+    max-height 0.5s ease 0.35s;
+}
+
+.home-page.resume-open .resume-panel {
+  max-width: 760px;
+  max-height: 1100px;
+}
+
+.resume-iframe {
+  display: block;
+  width: 760px;
+  height: 1000px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  margin-top: 20px;
 }
 
 @media (max-width: 640px) {

@@ -3,14 +3,15 @@
   color: var(--text-primary);
   text-align: center;
   padding: 20px 0;
-  border-top: 1px solid var(--border-card);
+  border-top: 1px solid var(--border-default);
   margin-top: 0;
+  font-family: Calibri, sans-serif;
 }
 
 .footer-text {
   margin: 0;
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
 }
 
 .footer-icons {
@@ -20,10 +21,10 @@
 .footer-icons a {
   margin: 0 10px;
   font-size: 20px;
-  color: var(--text-primary);
-  transition: color 0.3s ease;
+  color: var(--text-tertiary);
+  transition: color 0.2s ease;
 }
 
 .footer-icons a:hover {
-  color: var(--color-twitter);
+  color: var(--text-primary);
 }
