@@ -1,18 +1,20 @@
 .code-snippet {
-  width: 400px;
+  width: 370px;
+  overflow: hidden;
   background: var(--bg-panel);
   border: 1px solid var(--border-panel);
   border-radius: 8px;
   box-shadow: 0 0 18px var(--glow-panel), 0 0 4px var(--glow-panel);
   font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   padding: 18px 20px;
   line-height: 1.9;
   animation: fadeInRight 0.8s ease forwards, bob 4s ease-in-out 1s infinite;
 }
 
 .code-line {
-  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .code-indent {

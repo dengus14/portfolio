@@ -1,12 +1,10 @@
 import React from "react";
 import "./Home.css";
-import TerminalWindow from "../TerminalWindow/TerminalWindow";
 import CodeSnippet from "../CodeSnippet/CodeSnippet";
 
 const Home = () => {
   return (
     <div className="home-page">
-      <TerminalWindow />
       <CodeSnippet />
 
       <h2 className="home-title reveal" style={{ animationDelay: "0.3s" }}>Welcome to My Portfolio</h2>

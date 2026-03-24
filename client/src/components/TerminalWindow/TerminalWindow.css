@@ -1,11 +1,11 @@
 .terminal-window {
-  width: 300px;
+  width: 240px;
   background: var(--bg-panel);
   border: 1px solid var(--border-panel);
   border-radius: 8px;
   box-shadow: 0 0 18px var(--glow-panel), 0 0 4px var(--glow-panel);
   font-family: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   overflow: hidden;
   animation: fadeInLeft 0.8s ease forwards;
 }
@@ -37,8 +37,8 @@
 }
 
 .terminal-maximized {
-  width: 480px;
-  font-size: 0.85rem;
+  width: 380px;
+  font-size: 0.78rem;
 }
 
 .dot-red    { background: var(--dot-red); }
@@ -53,7 +53,7 @@
 
 .terminal-body {
   padding: 14px 16px;
-  min-height: 140px;
+  min-height: 110px;
   color: var(--text-code);
   line-height: 1.8;
 }
