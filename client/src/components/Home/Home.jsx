@@ -39,11 +39,16 @@ const Home = () => {
       </div>
 
       <h2 className="home-title reveal" style={{ animationDelay: "0.3s" }}>Welcome to My Portfolio</h2>
-      <p className="home-subtitle reveal" style={{ animationDelay: "0.5s" }}>Hi, I'm Denis 👋</p>
-      <p className="home-description reveal" style={{ animationDelay: "0.7s" }}>
-        I'm a Full-Stack Developer in training who loves building sleek, scalable
-  web apps. My focus is on React.js for frontend, and either SpringBoot Java or Node.js.
-      </p>
+      <div className="home-intro-row">
+        <img src="/Gusev_Denis_732-217-Edit.jpg" alt="Denis Gusev" className="home-photo reveal" style={{ animationDelay: "0.5s" }} />
+        <div className="home-intro reveal" style={{ animationDelay: "0.5s" }}>
+          <p className="home-subtitle">Hi, I'm Denis 👋</p>
+          <p className="home-description">
+            I'm a Full-Stack Developer in training who loves building sleek, scalable
+            web apps. My focus is on React.js for frontend, and either SpringBoot Java or Node.js.
+          </p>
+        </div>
+      </div>
       <div className="home-buttons reveal" style={{ animationDelay: "0.9s" }}>
         <button className="btn" onClick={handleToggle}>
           {resumeOpen ? "Close Resume" : "View My Resume"}
