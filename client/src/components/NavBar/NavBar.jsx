@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.css";
 
+const SECTIONS = ["home", "about", "projects"];
+
 const NavBar = () => {
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const observers = [];
+
+    SECTIONS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActive(id);
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
@@ -9,11 +34,16 @@ const NavBar = () => {
         <span>enis</span>
       </div>
       <div className="nav-links">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-</div>
-
+        {SECTIONS.map((id) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={active === id ? "active" : ""}
+          >
+            {id.charAt(0).toUpperCase() + id.slice(1)}
+          </a>
+        ))}
+      </div>
     </nav>
   );
 };

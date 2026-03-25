@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Card.css";
 
-const Card = ({ title, description, techStack, link }) => {
+const Card = ({ title, description, techStack, link, onExpand }) => {
   const [isOpen, setIsOpen] = useState(false);
   
   const handleOpen = () => {
@@ -33,11 +33,10 @@ const Card = ({ title, description, techStack, link }) => {
       {title === "Course Enrollment" && <button onClick={handleLinked} className="imageButton">view linkedin</button>}
       {title === "Commit Tracker" && <button onClick={handleCommit}className="imageButton">LIVE DEMO</button>}
 
-
       {title === "Status Page" &&<button onClick={handleOpen} className="imageButton">
         {isOpen ? "Close" : "View Work"}
       </button>}
-      {title === "Scan-To-Access-Note taking app" &&<button  className="imageButton">IN DEVELOPMENT</button>}
+      {title === "Scan-To-Access-Note taking app" && <button className="imageButton" disabled>IN DEVELOPMENT</button>}
 
       {isOpen && (
         <div className="image-container">
@@ -52,10 +51,19 @@ const Card = ({ title, description, techStack, link }) => {
       )}
 
       {link && (
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          View Project →
-        </a>
+        <div className="card-link-row">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            View Project
+          </a>
+        </div>
       )}
+
+      <button className="card-expand-btn" onClick={onExpand} aria-label="Expand project details">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M1 1h4M1 1v4M13 1h-4M13 1v4M1 13h4M1 13v-4M13 13h-4M13 13v-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+        </svg>
+        Expand
+      </button>
     </div>
   );
 };

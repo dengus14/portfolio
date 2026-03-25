@@ -4,7 +4,7 @@
     padding: 40px 20px;
     max-width: 800px;
     margin: 0 auto;
-    font-family: Calibri, sans-serif;
+  
 }
 
 .circle-container {
@@ -24,6 +24,28 @@
     transform: scale(1.3);
 }
 
+/* Mobile: replace absolute-positioned circle with a simple flex grid */
+@media (max-width: 640px) {
+    .circle-container {
+        position: static;
+        width: 100% !important;
+        height: auto !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin: 32px auto;
+    }
+
+    .circle-item {
+        position: static;
+        width: 44px;
+        height: 44px;
+        left: auto !important;
+        top: auto !important;
+    }
+}
+
 .about-container h2 {
     font-size: 1.75rem;
     font-weight: 600;
@@ -36,5 +58,5 @@
     line-height: 1.75;
     color: var(--text-tertiary);
     margin-bottom: 40px;
-    text-align: justify;
+    text-align: left;
 }

@@ -14,7 +14,7 @@
   /* text */
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
+  --text-tertiary: #8896aa;
   --text-code: #cbd5e1;
   --text-keyword: #94a3b8;
   --text-string: #cbd5e1;
@@ -42,7 +42,7 @@
 
 body {
   margin: 0;
-  font-family: Calibri, sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-primary);

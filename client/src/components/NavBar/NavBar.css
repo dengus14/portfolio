@@ -8,9 +8,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: top 0.3s;
+  transition: top 0.3s, background 0.3s ease, backdrop-filter 0.3s ease;
   z-index: 1000;
-  font-family: Calibri, sans-serif;
+
+  background: rgba(15, 17, 23, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-default);
 }
 
 .nav-brand {
