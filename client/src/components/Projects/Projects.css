@@ -16,8 +16,8 @@
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: start;
+  gap: 20px;
+  align-items: stretch;
 }
 
 /* Fade out before expanding */

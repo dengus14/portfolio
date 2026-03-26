@@ -1,70 +1,90 @@
-import React, { useState } from "react";
+import React from "react";
+import { ArrowRight, Maximize2, ExternalLink } from "lucide-react";
 import "./Card.css";
 
-const Card = ({ title, description, techStack, link, onExpand }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
+const STATUS_CONFIG = {
+  Live:           { label: "Live",           className: "card__status--live" },
+  "In Development": { label: "In Dev",       className: "card__status--dev"  },
+  Completed:      { label: "Completed",      className: "card__status--done" },
+};
+
+const Card = ({ title, description, techStack, link, linkText = "View Live", onExpand, status, year, imgSrc }) => {
+  const statusCfg = STATUS_CONFIG[status] || null;
+
+  const handleLinkClick = (e) => {
+    e.stopPropagation();
   };
 
-  const handleLinked = () =>{
-    window.open('https://www.linkedin.com/in/denis-gusev-408a73244/', "_blank")
-  }
-
-  const handleCommit = () =>{
-    window.open('https://committracker.onrender.com/', "_blank")
-  }
-
   return (
-    <div className={`card ${isOpen ? 'card-expanded' : ''}`}>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      {techStack && techStack.length > 0 && (
-        <div className="tech-stack">
-          <h3>Tech Stack:</h3>
-          <ul>
-            {techStack.map((tech, index) => (
-              <li key={index}>{tech}</li>
+    <article className="card">
+      {/* ── Image banner ───────────────────────────────────── */}
+      {imgSrc && (
+        <div className="card__image-wrap" aria-hidden="true">
+          <img
+            src={imgSrc}
+            alt={`${title} screenshot`}
+            className="card__image"
+            loading="lazy"
+          />
+          <div className="card__image-overlay" />
+        </div>
+      )}
+
+      {/* ── Body ───────────────────────────────────────────── */}
+      <div className="card__body">
+        {/* Meta row */}
+        <div className="card__meta">
+          {year && <span className="card__year">{year}</span>}
+          {statusCfg && (
+            <span className={`card__status ${statusCfg.className}`}>
+              {statusCfg.label}
+            </span>
+          )}
+        </div>
+
+        {/* Title */}
+        <h2 className="card__title">{title}</h2>
+
+        {/* Description */}
+        <p className="card__description">{description}</p>
+
+        {/* Tech stack pills */}
+        {techStack && techStack.length > 0 && (
+          <ul className="card__stack" aria-label="Tech stack">
+            {techStack.map((tech, i) => (
+              <li key={i} className="card__stack-pill">{tech}</li>
             ))}
           </ul>
+        )}
+
+        {/* Footer actions */}
+        <div className="card__footer">
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card__link"
+              onClick={handleLinkClick}
+              aria-label={`${linkText} for ${title}`}
+            >
+              {linkText}
+              <ArrowRight className="card__link-icon" size={14} aria-hidden="true" />
+            </a>
+          )}
+
+          <button
+            className="card__expand-btn"
+            onClick={onExpand}
+            aria-label={`Expand details for ${title}`}
+          >
+            <Maximize2 size={13} aria-hidden="true" />
+            Expand
+            <ExternalLink size={11} className="card__expand-arrow" aria-hidden="true" />
+          </button>
         </div>
-      )}
-      {title === "Course Enrollment" && <button onClick={handleLinked} className="imageButton">view linkedin</button>}
-      {title === "Commit Tracker" && <button onClick={handleCommit}className="imageButton">LIVE DEMO</button>}
-
-      {title === "Status Page" &&<button onClick={handleOpen} className="imageButton">
-        {isOpen ? "Close" : "View Work"}
-      </button>}
-      {title === "Scan-To-Access-Note taking app" && <button className="imageButton" disabled>IN DEVELOPMENT</button>}
-
-      {isOpen && (
-        <div className="image-container">
-          <img
-            src="/images/StatusPage.png"
-            alt="Status Page"
-            className="card-image"
-            width="400"
-            height="200"
-          />
-        </div>
-      )}
-
-      {link && (
-        <div className="card-link-row">
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
-        </div>
-      )}
-
-      <button className="card-expand-btn" onClick={onExpand} aria-label="Expand project details">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-          <path d="M1 1h4M1 1v4M13 1h-4M13 1v4M1 13h4M1 13v-4M13 13h-4M13 13v-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-        </svg>
-        Expand
-      </button>
-    </div>
+      </div>
+    </article>
   );
 };
 

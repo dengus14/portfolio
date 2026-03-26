@@ -59,6 +59,10 @@ const Projects = () => {
               description={project.description}
               techStack={project.techStack}
               link={project.link}
+              linkText={project.linkText}
+              status={project.status}
+              year={project.year}
+              imgSrc={project.images && project.images.length > 0 ? project.images[0] : null}
               onExpand={() => handleExpand(index)}
             />
           ))}
