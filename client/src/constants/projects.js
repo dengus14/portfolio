@@ -34,6 +34,17 @@ const projects = [
     link: "https://github.com/Chi-Sing-Thao/CompSci-595",
     linkText: "View on GitHub",
   },
+  {
+    title: "3D Portfolio Project",
+    description: "This a project I wanted to make for some time, it was made using a custom Blender scene, OS that was made in JavaScript/TypeScript with Three.js.",
+    techStack: ["React", "TypeScript", "Three.js", "JavaScript"], 
+    images: [],
+    role: "Frontend Engineer",
+    status: "Completed",
+    year: "2026",
+    link: "https://threed-site-rs9l.onrender.com/",
+    linkText: "Live Website",
+  },
 ];
 
 export default projects;
