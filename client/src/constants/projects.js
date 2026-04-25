@@ -4,7 +4,7 @@ const projects = [
     description: "A web application that tracks GitHub commit activity and visualizes contribution history.",
     techStack: ["React", "Node.js", "Express", "MongoDB"],
     detail: "Commit Tracker pulls live data from the GitHub API to display commit frequency, streaks, and repo-level breakdowns. Users can search any public profile and see an interactive heatmap of their activity over the past year. Built with a Node/Express backend that caches API responses to stay within rate limits.",
-    images: ["/images/StatusPage.png", "/images/StatusPage.png"],
+    images: ["/commitImage.png"],
     role: "Solo Developer",
     status: "Live",
     year: "2024",
